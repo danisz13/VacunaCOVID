@@ -8,6 +8,10 @@ package com.gf.Modelo;
 /**
  *
  * @author Dani
+ * @param nombre nombre del pais
+ * @param capitalInvertido capital invertido por las organizaciones del pais
+ * @param numHabitantes numero de habitantes
+ * @param codigo identificador del pais
  */
 public class Pais {
     private String nombre;

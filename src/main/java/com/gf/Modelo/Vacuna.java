@@ -8,6 +8,9 @@ package com.gf.Modelo;
 /**
  *
  * @author Dani
+ * @param nombre nombre de la vacuna en concreto
+ * @param fase fase en la que esta la vacuna
+ * @param variante variante en la que funciona esta vacuna
  */
 public class Vacuna {
     private String nombre;
