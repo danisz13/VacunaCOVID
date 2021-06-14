@@ -32,9 +32,12 @@ public class ControladorVistaLogin implements ActionListener {
     private PaisDAO paisDAO;
     private VacunaDAO vacunaDAO;
     private UsuariosDAO usuariosDAO;
-
+    private ControladorDatosPais controladorDatosPais;
+    private DatosPais datosPaisView;
     public ControladorVistaLogin(Login loginView, OrganizacionDAO organizacionDAO, PaisDAO paisDAO, VacunaDAO vacunaDAO, UsuariosDAO usuariosDAO) {
-
+        this.datosPaisView=new DatosPais();
+        this.controladorDatosPais=new ControladorDatosPais(datosPaisView, vacunaDAO);
+        
         this.loginView = loginView;
         this.organizacionDAO = organizacionDAO;
         this.paisDAO = paisDAO;
@@ -78,6 +81,7 @@ public class ControladorVistaLogin implements ActionListener {
                     this.loginView.getLabelTextoIncorrect().setVisible(true);
                 }else {
                     JOptionPane.showMessageDialog(null, "Usuario Correcto");
+                    controladorDatosPais.getDatosPaisView().setVisible(true);
                     
                 }
             } else {

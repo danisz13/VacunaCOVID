@@ -10,6 +10,7 @@ import com.gf.Modelo.Usuarios;
 import com.gf.Modelo.Vacuna;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -99,5 +100,61 @@ public class VacunaDAO {
             JOptionPane.showMessageDialog(null, "Error de base de datos");
         }
         return lista;
+    }
+    
+    public Object[][] getDatos() {
+        Object[][] datos = null;
+        String sql = "SELECT * FROM vacuna";
+        try (Statement st = Conexion.abrirConexion().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY)) {
+            ResultSet rs = st.executeQuery(sql);
+            
+            ResultSetMetaData rsmd = rs.getMetaData();
+            rs.last();
+            
+            int numColumnas = rsmd.getColumnCount();
+            int numFilas = rs.getRow();
+            datos = new Object[numFilas][numColumnas];
+            
+            //Procesamos el resultado
+            rs.beforeFirst();
+            int i=0; //Indicador de fila de la matriz
+            int j=0; //Indicador de columna de la matriz
+            
+            while(rs.next()){
+                for (j=0; j < numColumnas; j++) {
+                    datos[i][j]=rs.getObject(j+1);
+                }
+                i++;
+            }
+            
+            
+            return datos;
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error de base de datos");
+        }
+        return datos;
+    }
+    
+    public Object[] getColumnas() {
+        Object[] titulosColumnas=null;
+        String sql = "SELECT * FROM vacuna";
+        try (Statement st = Conexion.abrirConexion().createStatement()) {
+            ResultSet rs = st.executeQuery(sql);
+            
+            ResultSetMetaData rsmd = rs.getMetaData();
+            int numColumnas = rsmd.getColumnCount();
+            
+            titulosColumnas=new Object[numColumnas];
+            
+            //Obtenemos los titulos de las columnas
+            for (int i = 0; i < numColumnas; i++) {
+                titulosColumnas[i]=rsmd.getColumnName(i+1);
+            }
+            
+            
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return titulosColumnas;
     }
 }
