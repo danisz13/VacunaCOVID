@@ -28,6 +28,6 @@ public class App {
         PaisDAO paisDAO=new PaisDAO();
         VacunaDAO vacunaDAO=new VacunaDAO();
         UsuariosDAO usuariosDAO=new UsuariosDAO();
-        Controlador controlador = new Controlador(datosPaisView, loginView, organizacionDAO, paisDAO, vacunaDAO, usuariosDAO);
+        Controlador controlador = new Controlador( loginView, organizacionDAO, paisDAO, vacunaDAO, usuariosDAO);
     }
 }

@@ -69,18 +69,18 @@ public class UsuariosDAO {
     }
 
     public Usuarios get(String nombre) {
-        String sql = "select * from usuarios where nombre_usuario=?";
+        String sql = "select * from registrados where nombre_usuario=?";
         Usuarios usuario = null;
         try (PreparedStatement ps = Conexion.abrirConexion().prepareStatement(sql)) {
             ps.setString(1, nombre);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 usuario = new Usuarios(rs.getString(1), rs.getString(2), rs.getString(3));
-                
             }
 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Error de base de datos");
+            ex.printStackTrace();
         }
         return usuario;
     }

@@ -18,6 +18,11 @@ public class Usuarios {
     private String contrasena;
     private String pais;
 
+    public Usuarios(String nombre, String contrasena) {
+        this.nombre = nombre;
+        this.contrasena = contrasena;
+    }
+
     public Usuarios() {
     }
 
