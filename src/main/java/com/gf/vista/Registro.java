@@ -21,7 +21,7 @@ import javax.swing.JTextField;
 public class Registro extends javax.swing.JDialog {
 
     /**
-     * Creates new form Registro
+     * Createsnew form Registro
      * @param parent
      * @param modal
      */
