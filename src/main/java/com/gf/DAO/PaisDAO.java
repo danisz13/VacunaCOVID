@@ -129,8 +129,30 @@ public class PaisDAO {
             
             return datos;
         } catch (SQLException ex) {
-            ex.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Error de base de datos");
         }
         return datos;
+    }
+        private Object[] getColumnas() {
+        Object[] titulosColumnas=null;
+        String sql = "SELECT * FROM productos";
+        try (Statement st = Conexion.abrirConexion().createStatement()) {
+            ResultSet rs = st.executeQuery(sql);
+            
+            ResultSetMetaData rsmd = rs.getMetaData();
+            int numColumnas = rsmd.getColumnCount();
+            
+            titulosColumnas=new Object[numColumnas];
+            
+            //Obtenemos los titulos de las columnas
+            for (int i = 0; i < numColumnas; i++) {
+                titulosColumnas[i]=rsmd.getColumnName(i+1);
+            }
+            
+            
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return titulosColumnas;
     }
 }
