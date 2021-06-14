@@ -14,8 +14,10 @@ import javax.swing.JTable;
  */
 
 /**
- *
- * @author Victor
+ * 
+ * @author GRUPO5
+ * @since 14-06-2021
+ * @version 1.0 
  */
 public class DatosPais extends javax.swing.JFrame {
 
@@ -25,43 +27,72 @@ public class DatosPais extends javax.swing.JFrame {
     public DatosPais() {
         initComponents();
     }
-
+    
+    /*
+    * @return jLabel1
+    */
     public JLabel getjLabel1() {
         return jLabel1;
     }
-
+    
+    /*
+    * @param jLabel1 establece el valor de jLabel1
+    */
     public void setjLabel1(JLabel jLabel1) {
         this.jLabel1 = jLabel1;
     }
 
+    /*
+    * @return jLabel4
+    */
     public JLabel getjLabel4() {
         return jLabel4;
     }
-
+    
+    /*
+    * @param jLabel4 establece el valor de jLabel4
+    */
     public void setjLabel4(JLabel jLabel4) {
         this.jLabel4 = jLabel4;
     }
 
+    /*
+    * @return jPanel1
+    */
     public JPanel getjPanel1() {
         return jPanel1;
     }
 
+    /*
+    * @param jPanel1 establece el valor de jPanel1
+    */
     public void setjPanel1(JPanel jPanel1) {
         this.jPanel1 = jPanel1;
     }
 
+    /*
+    * @return jScrollPane1
+    */
     public JScrollPane getjScrollPane1() {
         return jScrollPane1;
     }
-
+    /*
+    * @param jScrollPane1 establece el valor de jScrollPane1
+    */
     public void setjScrollPane1(JScrollPane jScrollPane1) {
         this.jScrollPane1 = jScrollPane1;
     }
 
+    /*
+    * @return jLabel
+    */
     public JTable getjTable1() {
         return jTable1;
     }
 
+    /*
+    * @param jTable1 establece el valor de jTable1
+    */
     public void setjTable1(JTable jTable1) {
         this.jTable1 = jTable1;
     }
@@ -149,11 +180,6 @@ public class DatosPais extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    /*
-     * 
-     */
-    
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

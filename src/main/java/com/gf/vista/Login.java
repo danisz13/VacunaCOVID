@@ -13,110 +13,190 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author Victor
+ * @author GRUPO5
+ * @since 14-06-2021
+ * @version 1.0 
  */
 public class Login extends javax.swing.JFrame {
     
+    /*
+    * Instacia de com.gf.vista.Registro
+    */
     private Registro registroView;
     
+    /*
+    * Constructor sin parametros
+    */
     public Login() {
         initComponents();
         setLocationRelativeTo(null);
         this.registroView=new Registro(this, rootPaneCheckingEnabled);
     }
 
+    /*
+    * @return registroView
+    */
     public Registro getRegistroView() {
         return registroView;
     }
 
+    /*
+    * @param registroView para dar valor a registroView
+    */
     public void setRegistroView(Registro registroView) {
         this.registroView = registroView;
     }
 
+    /*
+    * @return botonInicioSesion
+    */
     public JButton getBotonInicioSesion() {
         return botonInicioSesion;
     }
 
+    /*
+    * @param registroView para dar valor a botonInicioSesion
+    */
     public void setBotonInicioSesion(JButton botonInicioSesion) {
         this.botonInicioSesion = botonInicioSesion;
     }
 
+    /*
+    * @return jLabel1
+    */
     public JLabel getjLabel1() {
         return jLabel1;
     }
 
+    /*
+    * @param registroView para dar valor a jLabel1
+    */
     public void setjLabel1(JLabel jLabel1) {
         this.jLabel1 = jLabel1;
     }
-
+    
+    /*
+    * @return jLabel2
+    */
     public JLabel getjLabel2() {
         return jLabel2;
     }
 
+    /*
+    * @param registroView para dar valor a jLabel2
+    */
     public void setjLabel2(JLabel jLabel2) {
         this.jLabel2 = jLabel2;
     }
 
+    /*
+    * @return jLabel3
+    */
     public JLabel getjLabel3() {
         return jLabel3;
     }
 
+    /*
+    * @param registroView para dar valor a jLabel3
+    */
     public void setjLabel3(JLabel jLabel3) {
         this.jLabel3 = jLabel3;
     }
 
+    /*
+    * @return jLabel4
+    */
     public JLabel getjLabel4() {
         return jLabel4;
     }
 
+    /*
+    * @param registroView para dar valor a jLabel4
+    */
     public void setjLabel4(JLabel jLabel4) {
         this.jLabel4 = jLabel4;
     }
 
+    /*
+    * @return jLabel5
+    */
     public JLabel getjLabel5() {
         return jLabel5;
     }
 
+    /*
+    * @param registroView para dar valor a jLabel5
+    */
     public void setjLabel5(JLabel jLabel5) {
         this.jLabel5 = jLabel5;
     }
 
+    /*
+    * @return jPanel1
+    */
     public JPanel getjPanel1() {
         return jPanel1;
     }
 
+    /*
+    * @param registroView para dar valor a jPanel1
+    */
     public void setjPanel1(JPanel jPanel1) {
         this.jPanel1 = jPanel1;
     }
 
+    /*
+    * @return labelCrear
+    */
     public JLabel getLabelCrear() {
         return labelCrear;
     }
 
+    /*
+    * @param registroView para dar valor a labelCrear
+    */
     public void setLabelCrear(JLabel labelCrear) {
         this.labelCrear = labelCrear;
     }
 
+    /*
+    * @return labelTextoIncorrect
+    */
     public JLabel getLabelTextoIncorrect() {
         return labelTextoIncorrect;
     }
 
+    /*
+    * @param registroView para dar valor a labelTextoIncorrect
+    */
     public void setLabelTextoIncorrect(JLabel labelTextoIncorrect) {
         this.labelTextoIncorrect = labelTextoIncorrect;
     }
 
+    /*
+    * @return textContraseña
+    */
     public JTextField getTextContraseña() {
         return textContraseña;
     }
 
+    /*
+    * @param registroView para dar valor a textContraseña
+    */
     public void setTextContraseña(JTextField textContraseña) {
         this.textContraseña = textContraseña;
     }
 
+    /*
+    * @return textNombre
+    */
     public JTextField getTextNombre() {
         return textNombre;
     }
 
+    /*
+    * @param registroView para dar valor a textNombre
+    */
     public void setTextNombre(JTextField textNombre) {
         this.textNombre = textNombre;
     }

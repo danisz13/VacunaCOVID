@@ -14,7 +14,9 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author Victor
+ * @author GRUPO5
+ * @since 14-06-2021
+ * @version 1.0 
  */
 public class Registro extends javax.swing.JDialog {
 
