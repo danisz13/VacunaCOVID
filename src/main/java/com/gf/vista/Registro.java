@@ -20,8 +20,8 @@ public class Registro extends javax.swing.JDialog {
 
     /**
      * Creates new form Registro
-     * @param parent
-     * @param modal
+     * @param parent vista login
+     * @param modal saber si es modal o no
      */
     
     public Registro(java.awt.Frame parent, boolean modal) {
