@@ -16,11 +16,16 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Dani
+ * @author GRUPO5
+ * @since 14-06-2021
+ * @version 1.0
  * 
  */
 public class OrganizacionDAO {
 
+    /*
+    * Insertar una nueva Organizacion
+    */
     public int insert(Organizacion organizacion) {
         String sql = "Insert into organizacion values (?,?,?,?,?,?,?,?,?,?,?)";
         int filasAfectadas = 0;
@@ -43,7 +48,10 @@ public class OrganizacionDAO {
         }
         return filasAfectadas;
     }
-
+    
+    /*
+    * Borrar una Organizacion
+    */
     public int delete(Organizacion organizacion) {
         String sql = "delete from organizacion where cod_pais=?";
         int filasAfectadas = 0;
@@ -57,6 +65,9 @@ public class OrganizacionDAO {
         return filasAfectadas;
     }
 
+    /*
+    * Actualizar una Organizacion
+    */
     public int update(Organizacion organizacion) {
         String sql = "update organizacion set nombre=?, nif=?, capital_invertido=?, num_trabajadores=?, "
                 + "privada=?, cod_pais=?, nombre_vacuna=?, fecha_actual=? dosis_fabricadas=?, fecha_prevista=? where cod_organizacion=?";
@@ -81,7 +92,10 @@ public class OrganizacionDAO {
         }
         return filasAfectadas;
     }
-
+    
+    /*
+    * Recuperar una Organizacion
+    */
     public Organizacion get(Integer codigo) {
         String sql = "select * from organizacion where cod_organizacion=?";
         Organizacion organizacion = null;
@@ -99,7 +113,10 @@ public class OrganizacionDAO {
         }
         return organizacion;
     }
-
+    
+    /*
+    *Recuperar todas las Organizaciones
+    */
     public ArrayList<Organizacion> getAll() {
         String sql = "select * from organizacion";
         ArrayList<Organizacion> lista = new ArrayList<>();

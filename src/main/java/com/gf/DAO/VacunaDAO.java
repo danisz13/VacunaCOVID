@@ -6,7 +6,6 @@
 package com.gf.DAO;
 
 import com.gf.Conexion.Conexion;
-import com.gf.Modelo.Usuarios;
 import com.gf.Modelo.Vacuna;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,9 +17,15 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Dani
+ * @author GRUPO5
+ * @since 14-06-2021
+ * @version 1.0
  */
 public class VacunaDAO {
+    
+    /*
+    *Insertar una nueva Vacuna
+    */
     public int insert(Vacuna vacuna) {
         String sql = "Insert into vacuna values (?,?,?)";
         int filasAfectadas = 0;
@@ -52,6 +57,9 @@ public class VacunaDAO {
         return filasAfectadas;
     }
 
+    /*
+    *Actualizar una Vacuna
+    */
     public int update(Vacuna vacuna) {
         String sql = "update vacuna set variante_covid=?, fase=? where nombre_vacuna=?";
         int filasAfectadas = 0;
@@ -69,7 +77,10 @@ public class VacunaDAO {
         }
         return filasAfectadas;
     }
-
+    
+    /*
+    *Recuperar una Vacuna
+    */
     public Vacuna get(String nombre) {
         String sql = "select * from vacuna where nombre_vacuna=?";
         Vacuna vacuna = null;
@@ -86,7 +97,10 @@ public class VacunaDAO {
         }
         return vacuna;
     }
-
+        
+    /*
+    *Recuperar todas las Vacunas
+    */
     public ArrayList<Vacuna> getAll() {
         String sql = "select * from vacuna";
         ArrayList<Vacuna> lista = new ArrayList<>();
@@ -102,6 +116,10 @@ public class VacunaDAO {
         return lista;
     }
     
+    /*
+    *Recuperar los datos de las vacunas.
+    *<b>Uso principal --> para rellenar los nombres de las columnas de Jtable1 ubicado en com.gf.Registro.java</b>
+    */
     public Object[][] getDatos() {
         Object[][] datos = null;
         String sql = "SELECT * FROM vacuna";
@@ -135,6 +153,10 @@ public class VacunaDAO {
         return datos;
     }
     
+    /*
+    *Recuperar los nombres de la tabla vacunas.
+    *<b>Uso principal --> para las filas de Jtable1 ubicado en com.gf.Registro.java</b>
+    */
     public Object[] getColumnas() {
         Object[] titulosColumnas=null;
         String sql = "SELECT * FROM vacuna";

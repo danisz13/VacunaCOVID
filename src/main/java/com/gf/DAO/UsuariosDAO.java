@@ -16,9 +16,15 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Dani
+ * @author GRUPO5
+ * @since 14-06-2021
+ * @version 1.0
  */
 public class UsuariosDAO {
+    
+    /*
+    *Insertar un nuevo Usuario
+    */
     public int insert(Usuarios usuario) {
         String sql = "Insert into registrados values (?,?,?)";
         int filasAfectadas = 0;
@@ -36,7 +42,10 @@ public class UsuariosDAO {
         }
         return filasAfectadas;
     }
-
+    
+    /*
+    *Borrar un Usuario
+    */
     public int delete(Usuarios usuario) {
         String sql = "delete from registrados where nombre_usuario=?";
         int filasAfectadas = 0;
@@ -49,7 +58,10 @@ public class UsuariosDAO {
         }
         return filasAfectadas;
     }
-
+    
+    /*
+    *Actualizar un Usuario
+    */
     public int update(Usuarios usuario) {
         String sql = "update registrados set contrasena=?, pais=? where nombre_usuario=?";
         int filasAfectadas = 0;
@@ -67,7 +79,10 @@ public class UsuariosDAO {
         }
         return filasAfectadas;
     }
-
+    
+    /*
+    *Recuperar un Usuario
+    */
     public Usuarios get(String nombre) {
         String sql = "select * from registrados where nombre_usuario=?";
         Usuarios usuario = null;
@@ -84,7 +99,10 @@ public class UsuariosDAO {
         }
         return usuario;
     }
-
+    
+    /*
+    *Recuperar todos los Usuarios
+    */
     public ArrayList<Usuarios> getAll() {
         String sql = "select * from registrados";
         ArrayList<Usuarios> lista = new ArrayList<>();

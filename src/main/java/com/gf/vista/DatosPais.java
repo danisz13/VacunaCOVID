@@ -20,7 +20,7 @@ import javax.swing.JTable;
 public class DatosPais extends javax.swing.JFrame {
 
     /**
-     * Creates new form DatosPais
+     * Constructor sin parametros
      */
     public DatosPais() {
         initComponents();
@@ -150,11 +150,11 @@ public class DatosPais extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     
+    /*
+     * 
      */
     
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;

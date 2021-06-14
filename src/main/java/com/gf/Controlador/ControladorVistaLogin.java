@@ -28,16 +28,41 @@ import javax.swing.JOptionPane;
  */
 public class ControladorVistaLogin implements ActionListener {
 
+    /*
+    * Instancia de la clase Login
+    */
     private Login loginView;
+    /*
+    * Instancia de la clase OrganizacionDAO
+    */
     private OrganizacionDAO organizacionDAO;
+    /*
+    * Instancia de la clase PaisDAO
+    */
     private PaisDAO paisDAO;
+    /*
+    * Instancia de la clase VacunaDAO
+    */
     private VacunaDAO vacunaDAO;
+    /*
+    * Instancia de la clase UsuariosDAO
+    */
     private UsuariosDAO usuariosDAO;
+    /*
+    * Instancia de la clase ControladorDatosPais
+    */
     private ControladorDatosPais controladorDatosPais;
+    /*
+    * Instancia de la clase DatosPais
+    */
     private DatosPais datosPaisView;
     
     /*
-    * 
+    *@param loginView 
+    *@param organizacionDAO
+    *@param organizacionDAO
+    *@param vacunaDAO
+    *@param usuariosDAO
     */
     public ControladorVistaLogin(Login loginView, OrganizacionDAO organizacionDAO, PaisDAO paisDAO, VacunaDAO vacunaDAO, UsuariosDAO usuariosDAO) {
         this.datosPaisView=new DatosPais();
@@ -61,7 +86,10 @@ public class ControladorVistaLogin implements ActionListener {
         this.loginView.getRegistroView().getComboListaPaises().setModel(getCombo());
 
     }
-
+    
+    /*
+    * @return DefaultComboBoxModel
+    */
     private DefaultComboBoxModel getCombo() {
         DefaultComboBoxModel<Pais> combo = new DefaultComboBoxModel<>();
 
@@ -71,7 +99,10 @@ public class ControladorVistaLogin implements ActionListener {
         }
         return combo;
     }
-
+    
+    /*
+    * Metodo para la pulsacion de teclado, donde la ventana de registro se hará visible 
+    */
     private void labelRegistroMouseClicked(java.awt.event.MouseEvent evt) {
         this.loginView.getRegistroView().setVisible(true);
     }

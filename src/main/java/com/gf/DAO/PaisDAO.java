@@ -7,10 +7,8 @@ package com.gf.DAO;
 
 import com.gf.Conexion.Conexion;
 import com.gf.Modelo.Pais;
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -18,9 +16,15 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Dani
+ * @author GRUPO5
+ * @since 14-06-2021
+ * @version 1.0
  */
 public class PaisDAO {
+    
+    /*
+    * Insertar un nuevo Pais
+    */
      public int insert(Pais pais) {
         String sql = "Insert into pais values (?,?,?,?)";
         int filasAfectadas = 0;
@@ -39,6 +43,9 @@ public class PaisDAO {
         return filasAfectadas;
     }
 
+    /*
+    * Borrar un Pais
+    */
     public int delete(Pais pais) {
         String sql = "delete from pais where cod_pais=?";
         int filasAfectadas = 0;
@@ -51,7 +58,10 @@ public class PaisDAO {
         }
         return filasAfectadas;
     }
-
+    
+    /*
+    *Actualizar un pais
+    */
     public int update(Pais pais) {
         String sql = "update pais set capital_invertido=?, nombre=?, n_habitantes=? where cod_pais=?";
         int filasAfectadas = 0;
@@ -69,7 +79,10 @@ public class PaisDAO {
         }
         return filasAfectadas;
     }
-
+    
+    /*
+    *Recuperar un pais
+    */
     public Pais get(Integer codigo) {
         String sql = "select * from pais where cod_pais=?";
         Pais pais = null;
@@ -86,7 +99,9 @@ public class PaisDAO {
         }
         return pais;
     }
-
+    /*
+    *Recuperar todos los paises
+    */
     public ArrayList<Pais> getAll() {
         String sql = "select * from pais";
         ArrayList<Pais> lista = new ArrayList<>();

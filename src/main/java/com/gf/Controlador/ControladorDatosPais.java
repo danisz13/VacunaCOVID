@@ -13,15 +13,25 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author examen
+ * @author GRUPO5
  * @since 14-06-2021
  * @version 1.0
  */
 public class ControladorDatosPais implements ActionListener{
-        
+    
+    /*
+    * Instancia de DatosPais
+    */
     private DatosPais datosPaisView;    
+    /*
+    * Instancia de VacunaDAO
+    */
     private VacunaDAO vacunaDAO;
 
+    /*
+    * @param datosPaisView
+    * @param vacunaDAO
+    */
     public ControladorDatosPais(DatosPais datosPaisView, VacunaDAO vacunaDAO) {
         this.datosPaisView = datosPaisView;
         this.vacunaDAO=vacunaDAO;
@@ -36,14 +46,14 @@ public class ControladorDatosPais implements ActionListener{
     }
     
     /*
-    * Set datosPaisView
+    *@param datosPaisView para dar valor a datosPaisView
     */
     public void setDatosPaisView(DatosPais datosPaisView) {
         this.datosPaisView = datosPaisView;
     }
    
     
-    /*
+    /*    
     * @return DefaultTableModel
     */
     private DefaultTableModel getModeloTabla(){
