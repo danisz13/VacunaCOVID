@@ -8,9 +8,7 @@ package com.gf.Modelo;
 /**
  *
  * @author Dani
- * @param nombre nombre del usuario 
- * @param contrasena contraseña del usuario
- * @param pais pais al que pertenece
+
  * 
  */
 public class Usuarios {

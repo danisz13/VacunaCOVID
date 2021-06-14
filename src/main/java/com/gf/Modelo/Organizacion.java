@@ -11,17 +11,6 @@ import java.sql.Date;
 /**
  *
  * @author Dani 
- * @param nombre nombre de la organizacion
- * @param NIF NIF de la organizacion
- * @param capitalInvertido cantidad de dinero invertido por la organizacion
- * @param numTrabajadores numero de trabajadores de la organizacion
- * @param privada indica si es privada o publica
- * @param codigo codigo de identificacion de la organizacion
- * @param codPais codigo del pais al que pertenece
- * @param nombreVacuna nombre de la vacuna en desarrollo
- * @param dosisFabricadas cantidad de dosis fabricadas hasta la fecha
- * @param fechaHoy fecha actual
- * @param fechaPrevista fecha prevista de las primeras dosis, nulo en el caso de que ya este en distribucion
  * 
  */
 public class Organizacion {
