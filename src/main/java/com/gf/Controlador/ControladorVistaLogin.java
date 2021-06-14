@@ -25,7 +25,7 @@ import javax.swing.JOptionPane;
  *
  * @author Dani
  */
-public class Controlador implements ActionListener {
+public class ControladorVistaLogin implements ActionListener {
 
     private Login loginView;
     private OrganizacionDAO organizacionDAO;
@@ -33,7 +33,7 @@ public class Controlador implements ActionListener {
     private VacunaDAO vacunaDAO;
     private UsuariosDAO usuariosDAO;
 
-    public Controlador(Login loginView, OrganizacionDAO organizacionDAO, PaisDAO paisDAO, VacunaDAO vacunaDAO, UsuariosDAO usuariosDAO) {
+    public ControladorVistaLogin(Login loginView, OrganizacionDAO organizacionDAO, PaisDAO paisDAO, VacunaDAO vacunaDAO, UsuariosDAO usuariosDAO) {
 
         this.loginView = loginView;
         this.organizacionDAO = organizacionDAO;
@@ -76,19 +76,21 @@ public class Controlador implements ActionListener {
             if (usuario != null) {
                 if (!usuario.getContrasena().equals(this.loginView.getTextContraseña().getText())) {
                     this.loginView.getLabelTextoIncorrect().setVisible(true);
+                }else {
+                    JOptionPane.showMessageDialog(null, "Usuario Correcto");
+                    
                 }
             } else {
                 this.loginView.getLabelTextoIncorrect().setVisible(true);
             }
-            if (usuario == new Usuarios(this.loginView.getTextNombre().getText(), this.loginView.getTextContraseña().getText())) {
-                //controlador datospais
-            }
+            
         } else if (e.getSource() == this.loginView.getRegistroView().getBotonCrearCuenta()) {
             Usuarios usuario = usuariosDAO.get(this.loginView.getTextNombre().getText());
             if (usuario == null) {
-                if (!this.loginView.getTextNombre().getText().isEmpty()) {
-                    if(this.loginView.getRegistroView().getTextContraseña()==this.loginView.getRegistroView().getTextRepiteContraseña()){
-                        usuariosDAO.insert(new Usuarios(this.loginView.getTextNombre().getText(), this.loginView.getTextContraseña().getText(), (String) this.loginView.getRegistroView().getComboListaPaises().getSelectedItem()));
+                if ((this.loginView.getTextNombre().getText()).equals("")) {
+                    if(this.loginView.getRegistroView().getTextContraseña().getText().equals(this.loginView.getRegistroView().getTextRepiteContraseña().getText())){
+                        usuariosDAO.insert(new Usuarios(this.loginView.getRegistroView().getTextNombre().getText(), this.loginView.getRegistroView().getTextContraseña().getText(), this.loginView.getRegistroView().getComboListaPaises().getSelectedItem().toString()));
+                        JOptionPane.showMessageDialog(null, "Usuario insertado");
                     }else{
                         JOptionPane.showMessageDialog(null, "Las contraseñas no coinciden");
                         this.loginView.getRegistroView().getTextContraseña().requestFocus();

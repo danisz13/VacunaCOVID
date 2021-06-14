@@ -5,7 +5,7 @@
  */
 package com.gf.App;
 
-import com.gf.Controlador.Controlador;
+import com.gf.Controlador.ControladorVistaLogin;
 import com.gf.DAO.OrganizacionDAO;
 import com.gf.DAO.PaisDAO;
 import com.gf.DAO.UsuariosDAO;
@@ -28,6 +28,6 @@ public class App {
         PaisDAO paisDAO=new PaisDAO();
         VacunaDAO vacunaDAO=new VacunaDAO();
         UsuariosDAO usuariosDAO=new UsuariosDAO();
-        Controlador controlador = new Controlador( loginView, organizacionDAO, paisDAO, vacunaDAO, usuariosDAO);
+        ControladorVistaLogin controlador = new ControladorVistaLogin(loginView, organizacionDAO, paisDAO, vacunaDAO, usuariosDAO);
     }
 }
