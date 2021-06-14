@@ -11,7 +11,6 @@ import java.sql.Date;
 /**
  *
  * @author GRUPO5 
- * 
  */
 public class Organizacion {
 

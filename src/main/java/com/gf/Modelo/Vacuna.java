@@ -8,6 +8,7 @@ package com.gf.Modelo;
 /**
  *
  * @author Dani
+
  */
 public class Vacuna {
     private String nombre;
