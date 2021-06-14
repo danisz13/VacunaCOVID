@@ -15,7 +15,9 @@ import com.gf.vista.Login;
 
 /**
  *
- * @author Dani
+ * @author GRUPO5
+ * @since 14-06-2021
+ * @version 1.0
  */
 public class App {
 

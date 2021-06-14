@@ -20,6 +20,8 @@ public class Registro extends javax.swing.JDialog {
 
     /**
      * Creates new form Registro
+     * @param parent
+     * @param modal
      */
     
     public Registro(java.awt.Frame parent, boolean modal) {
@@ -256,7 +258,7 @@ public class Registro extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     /**
-     * @param args the command line arguments
+     
      */
     
 

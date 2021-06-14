@@ -17,13 +17,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.util.ArrayList;
-import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author Dani
+ * @author GRUPO5
+ * @since 14-06-2021
+ * @version 1.0
  */
 public class ControladorVistaLogin implements ActionListener {
 
@@ -34,6 +35,10 @@ public class ControladorVistaLogin implements ActionListener {
     private UsuariosDAO usuariosDAO;
     private ControladorDatosPais controladorDatosPais;
     private DatosPais datosPaisView;
+    
+    /*
+    * 
+    */
     public ControladorVistaLogin(Login loginView, OrganizacionDAO organizacionDAO, PaisDAO paisDAO, VacunaDAO vacunaDAO, UsuariosDAO usuariosDAO) {
         this.datosPaisView=new DatosPais();
         this.controladorDatosPais=new ControladorDatosPais(datosPaisView, vacunaDAO);
