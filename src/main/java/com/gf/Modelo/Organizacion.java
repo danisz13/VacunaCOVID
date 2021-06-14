@@ -10,7 +10,7 @@ import java.sql.Date;
 
 /**
  *
- * @author Dani 
+ * @author GRUPO5 
  * 
  */
 public class Organizacion {
